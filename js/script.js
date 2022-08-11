@@ -31,7 +31,7 @@ document.querySelector('.btn--roll').addEventListener('click', function(){
         document.querySelector('#current--' +activePlayer).textContent= roundScore;
 
     } else {
-        // Next player turns
+        // Next player-s turn
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
         //set the round score to  0
@@ -45,5 +45,40 @@ document.querySelector('.btn--roll').addEventListener('click', function(){
 
         diceDom.style.display = 'none';
     }
+    
+});
+
+document.querySelector('.btn--hold').addEventListener('click', function() {
+    scores[activePlayer] += roundScore;
+    document.querySelector('#score--' +activePlayer).textContent = scores[activePlayer];
+
+    if(scores[activePlayer] >= 30) {
+        document.querySelector('#name--' +activePlayer).textContent = 'Winner!!!';
+
+        document.querySelector('.dice').style.display = 'none';
+
+        document.querySelector('.player--' +activePlayer).classList.add('player--winner');
+
+        document.querySelector('.player--' +activePlayer).classList.remove('player--active');
+
+
+       
+
+    } else {
+        // Next player-s turn
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+
+    //set the round score to  0
+    roundScore = 0;
+    document.querySelector('#current--0').textContent = '0';
+    document.querySelector('#current--1').textContent = '0';
+
+    document.querySelector('.player--0').classList.toggle('player--active');
+
+    document.querySelector('.player--1').classList.toggle('player--active');
+
+   
+    }
+    
     
 });
