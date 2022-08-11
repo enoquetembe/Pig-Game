@@ -77,8 +77,39 @@ document.querySelector('.btn--hold').addEventListener('click', function() {
 
     document.querySelector('.player--1').classList.toggle('player--active');
 
-   
-    }
-    
-    
+    } 
 });
+
+document.querySelector('.btn--new').addEventListener('click', function(){
+    let scores = [0, 0];
+    let roundScore = 0;
+    let activePlayer = 0;
+
+    document.querySelector('.dice').style.display = 'none';
+
+
+    document.querySelector('#score--0').textContent = '0';
+    document.querySelector('#score--1').textContent = '0';
+
+    document.querySelector('#current--0').textContent = '0';
+    document.querySelector('#current--1').textContent = '0'
+    
+
+    document.querySelector('#name--0').textContent = 'Player 1'
+    document.querySelector('#name--1').textContent = 'Player 2'
+
+    document.querySelector('.player--0').classList.remove('player--active');
+    document.querySelector('.player--1').classList.remove('player--active');
+
+    document.querySelector('.player--0').classList.remove('player--winner');
+    document.querySelector('.player--1').classList.remove('player--winner');
+
+    document.querySelector('.player--0').classList.add('player--active');
+    
+     console.log(scores[0], scores[1]);
+
+});
+
+
+
+console.log(scores[0], scores[1]);
