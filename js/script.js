@@ -43,7 +43,7 @@ function changePlayer() {
 
     document.querySelector('.player--1').classList.toggle('player--active');
 
-    diceDom.style.display = 'none';
+    document.querySelector('.dice').style.display = 'none';
 }
 
 //initialize the game
