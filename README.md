@@ -1,7 +1,7 @@
 # Pig Game
 
 This is the famous Pig game made by me, I made this game as way to put into practice and improve my JavaScript skills. I got the inspiration to build this game from a friend of mine, he made a similar one and I liked it and I thought, let me make it mine too, and this is my version of the game 😁
-The rules of the game are very clear, let me explain to you:
+The rules of the game are very clear, let me explain to you.
 <br>
 <br>
 
